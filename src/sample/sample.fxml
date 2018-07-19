@@ -8,13 +8,13 @@
 <?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.control.cell.PropertyValueFactory?>
 
-<BorderPane fx:controller="sample.Controller"
+<BorderPane fx:id="mainBorderPane" fx:controller="sample.Controller"
             xmlns:fx="http://javafx.com/fxml">
 
     <top>
         <MenuBar>
             <Menu text="Contacts">
-                <MenuItem text="Add..."/>
+                <MenuItem text="Add..." onAction="#showNewContactDialog"/>
                 <SeparatorMenuItem/>
                 <MenuItem text="Edit..."/>
                 <SeparatorMenuItem/>
@@ -30,22 +30,22 @@
             <columns>
                 <TableColumn text="First Name">
                     <cellValueFactory>
-                        <PropertyValueFactory property="firstNameField"/>
+                        <PropertyValueFactory property="firstName"/>
                     </cellValueFactory>
                 </TableColumn>
                 <TableColumn text="Last Name">
                     <cellValueFactory>
-                        <PropertyValueFactory property="lastNameField"/>
+                        <PropertyValueFactory property="lastName"/>
                     </cellValueFactory>
                 </TableColumn>
                 <TableColumn text="Phone Number">
                     <cellValueFactory>
-                        <PropertyValueFactory property="phoneNumberField"/>
+                        <PropertyValueFactory property="phoneNumber"/>
                     </cellValueFactory>
                 </TableColumn>
                 <TableColumn text="Notes">
                     <cellValueFactory>
-                        <PropertyValueFactory property="notesField"/>
+                        <PropertyValueFactory property="notes"/>
                     </cellValueFactory>
                 </TableColumn>
             </columns>
