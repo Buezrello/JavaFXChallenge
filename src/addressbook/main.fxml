@@ -1,0 +1,56 @@
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<BorderPane fx:id="mainBorderPane" fx:controller="addressbook.Controller"
+            xmlns:fx="http://javafx.com/fxml">
+
+    <top>
+        <MenuBar>
+            <Menu text="Contacts">
+                <MenuItem text="Add..." onAction="#showNewContactDialog"/>
+                <SeparatorMenuItem/>
+                <MenuItem text="Edit..." onAction="#showEditContactDialog"/>
+                <SeparatorMenuItem/>
+                <MenuItem text="Delete..." onAction="#handleDelete"/>
+                <SeparatorMenuItem/>
+                <MenuItem text="Exit" onAction="#handleExit"/>
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <center>
+        <TableView fx:id="tableView" GridPane.columnIndex="0" GridPane.rowIndex="0">
+            <columns>
+                <TableColumn text="First Name" prefWidth="100">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="firstName"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Last Name" prefWidth="100">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="lastName"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Phone Number" prefWidth="100">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="phoneNumber"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Notes" prefWidth="300">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="notes"/>
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </center>
+
+
+</BorderPane>

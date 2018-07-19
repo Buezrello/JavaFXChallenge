@@ -1,5 +1,7 @@
-package sample;
+package addressbook;
 
+import addressbook.datamodel.Contact;
+import addressbook.datamodel.ContactData;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 
