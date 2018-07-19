@@ -5,19 +5,56 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TableColumn?>
-<GridPane fx:controller="sample.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<BorderPane fx:controller="sample.Controller"
+            xmlns:fx="http://javafx.com/fxml">
 
-    <TableView fx:id="tableView" GridPane.columnIndex="0" GridPane.rowIndex="0">
-        <columns>
-            <TableColumn text="First Name">
-            </TableColumn>
-            <TableColumn text="Last Name">
-            </TableColumn>
-            <TableColumn text="Phone Number">
-            </TableColumn>
-            <TableColumn text="Notes">
-            </TableColumn>
-        </columns>
-    </TableView>
-</GridPane>
+    <top>
+        <MenuBar>
+            <Menu text="Contacts">
+                <MenuItem text="Add..."/>
+                <SeparatorMenuItem/>
+                <MenuItem text="Edit..."/>
+                <SeparatorMenuItem/>
+                <MenuItem text="Delete"/>
+                <SeparatorMenuItem/>
+                <MenuItem text="Exit" onAction="#handleExit"/>
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <center>
+        <TableView fx:id="tableView" GridPane.columnIndex="0" GridPane.rowIndex="0">
+            <columns>
+                <TableColumn text="First Name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="firstNameField"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Last Name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="lastNameField"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Phone Number">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="phoneNumberField"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Notes">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="notesField"/>
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </center>
+
+
+</BorderPane>

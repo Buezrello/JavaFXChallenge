@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -20,4 +21,10 @@ public class Controller {
 
     @FXML
     private TextField notesField;
+
+
+    @FXML
+    public void handleExit() {
+        Platform.exit();
+    }
 }
