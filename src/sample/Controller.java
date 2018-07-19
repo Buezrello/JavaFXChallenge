@@ -1,6 +1,7 @@
 package sample;
 
 import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -26,5 +27,8 @@ public class Controller {
     @FXML
     public void handleExit() {
         Platform.exit();
+    }
+
+    public void handleDelete(ActionEvent actionEvent) {
     }
 }
