@@ -60,4 +60,10 @@
 	<phone_number>aaa</phone_number>
 	<notes>aaa</notes>
 </contact>
+<contact>
+	<first_name>657</first_name>
+	<last_name>77</last_name>
+	<phone_number>756</phone_number>
+	<notes>56</notes>
+</contact>
 </contacts>

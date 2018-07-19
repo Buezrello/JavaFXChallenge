@@ -22,7 +22,7 @@ public class DialogController {
     @FXML
     private TextField notesField;
 
-    public Contact processResult() {
+    Contact processResult() {
         String firstName = firstNameField.getText().trim();
         String lastName = lastNameField.getText().trim();
         String phoneNumber = phoneNumberField.getText().trim();
@@ -34,7 +34,7 @@ public class DialogController {
         return newContact;
     }
 
-    public void selectedContact(Contact contact) {
+    void selectedContact(Contact contact) {
         firstNameField.setText(contact.getFirstName());
         lastNameField.setText(contact.getLastName());
         phoneNumberField.setText(contact.getPhoneNumber());

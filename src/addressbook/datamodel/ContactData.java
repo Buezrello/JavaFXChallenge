@@ -33,7 +33,7 @@ public class ContactData {
     private ObservableList<Contact> contacts;
     private static ContactData contactData = new ContactData();
 
-    public ContactData() {
+    private ContactData() {
         // *** initialize the contacts list here ***
         contacts = FXCollections.observableArrayList();
     }

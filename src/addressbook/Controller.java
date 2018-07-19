@@ -20,7 +20,7 @@ public class Controller {
     private TableView<Contact> tableView;
 
 
-    public Contact getSelectedContact() {
+    private Contact getSelectedContact() {
         return tableView.getSelectionModel().getSelectedItem();
     }
 
