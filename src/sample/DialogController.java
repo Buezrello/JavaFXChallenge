@@ -31,4 +31,11 @@ public class DialogController {
 
         return newContact;
     }
+
+    public void selectedContact(Contact contact) {
+        firstNameField.setText(contact.getFirstName());
+        lastNameField.setText(contact.getLastName());
+        phoneNumberField.setText(contact.getPhoneNumber());
+        notesField.setText(contact.getNotes());
+    }
 }
